@@ -169,6 +169,46 @@
       display: block;
     }
 
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      flex-shrink: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .nav-toggle-bar {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--ink);
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .site-header.is-open .nav-toggle-bar:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .site-header.is-open .nav-toggle-bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .site-header.is-open .nav-toggle-bar:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    body.nav-open {
+      overflow: hidden;
+    }
+
     .btn {
       display: inline-flex;
       align-items: center;
@@ -826,7 +866,83 @@
     }
 
     @media (max-width: 960px) {
-      nav.main-nav { display: none; }
+      .header-inner {
+        flex-wrap: wrap;
+        gap: 0;
+        padding: 12px 0;
+      }
+
+      .brand {
+        flex: 1;
+        min-width: 0;
+        gap: 10px;
+        padding-bottom: 12px;
+      }
+
+      .brand-mark {
+        width: 44px;
+        height: 44px;
+      }
+
+      .brand-text strong {
+        font-size: 13px;
+      }
+
+      .brand-text small {
+        font-size: 10px;
+      }
+
+      .header-actions {
+        gap: 8px;
+        padding-bottom: 12px;
+      }
+
+      .header-actions .header-cta {
+        display: none;
+      }
+
+      .header-logo img {
+        height: 30px;
+      }
+
+      .nav-toggle {
+        display: flex;
+      }
+
+      nav.main-nav {
+        display: none;
+        flex: 0 0 100%;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        padding: 4px 0 12px;
+        border-top: 1px solid rgba(0, 0, 0, 0.06);
+        font-size: 14px;
+      }
+
+      .site-header.is-open nav.main-nav {
+        display: flex;
+      }
+
+      nav.main-nav a {
+        padding: 14px 4px;
+        border-bottom: 1px solid var(--sand);
+      }
+
+      nav.main-nav a:last-child {
+        border-bottom: none;
+      }
+
+      nav.main-nav a.active::after,
+      nav.main-nav a:hover::after {
+        display: none;
+      }
+
+      nav.main-nav a.active {
+        color: var(--red);
+        font-weight: 600;
+      }
+
       .hero-grid, .split, .contact-grid, .usp-grid, .format-groups, .step-list { grid-template-columns: 1fr; }
       .hero-grid-title,
       .hero-body,

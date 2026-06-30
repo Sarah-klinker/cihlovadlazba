@@ -28,7 +28,7 @@
           <small>www.cihlovadlazba.cz</small>
         </div>
       </a>
-      <nav class="main-nav" aria-label="Hlavní navigace">
+      <nav class="main-nav" id="main-nav" aria-label="Hlavní navigace">
         <a href="index.html">Domů</a>
         <a href="index.html#o-dlazbe">O dlažbě</a>
         <a href="realizace.html">Realizace</a>
@@ -39,7 +39,12 @@
         <a class="header-logo" href="https://www.klinkercentrum.cz/" target="_blank" rel="noopener">
           <img src="assets/cihlovadlazba/logo-klinkercentrum.webp" alt="Klinker Centrum" width="150" height="36" />
         </a>
-        <a class="btn btn-primary" href="https://www.klinkercentrum.cz/kontakt" target="_blank" rel="noopener">Konzultace</a>
+        <a class="btn btn-primary header-cta" href="https://www.klinkercentrum.cz/kontakt" target="_blank" rel="noopener">Konzultace</a>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Otevřít menu">
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
       </div>
     </div>
   </header>
@@ -255,5 +260,6 @@
     </div>
   </footer>
 
+  <script src="assets/cihlovadlazba/mobile-nav.js"></script>
 </body>
 </html>
