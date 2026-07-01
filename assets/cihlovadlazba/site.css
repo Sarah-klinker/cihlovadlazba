@@ -953,7 +953,7 @@
       }
 
       nav.main-nav a {
-        padding: 14px 0;
+        padding: 14px 20px;
         border-bottom: 1px solid var(--sand);
         color: var(--ink);
         background: var(--white);
