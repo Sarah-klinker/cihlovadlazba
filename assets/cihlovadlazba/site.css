@@ -486,25 +486,19 @@
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
+      color: rgba(255, 255, 255, 0.72);
     }
 
     .format-shape {
-      border: 2px solid #fff;
-      box-sizing: border-box;
+      display: block;
+      flex-shrink: 0;
     }
 
     .format-shape--square { width: 44px; height: 44px; }
 
     .format-shape--rect { width: 56px; height: 30px; }
 
-    .format-shape--hex {
-      width: 44px;
-      height: 44px;
-      border: none;
-      background: none;
-      object-fit: contain;
-      display: block;
-    }
+    .format-shape--hex { width: 44px; height: 44px; }
 
     .format-group-title {
       font-size: 18px;
