@@ -851,20 +851,6 @@
 
     .footer-inner a { color: #fff; }
 
-    .mockup-badge {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      background: var(--ink);
-      color: #fff;
-      font-size: 11px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      padding: 10px 14px;
-      z-index: 200;
-      box-shadow: var(--shadow);
-    }
-
     @media (max-width: 960px) {
       header.site-header {
         background: var(--white);
